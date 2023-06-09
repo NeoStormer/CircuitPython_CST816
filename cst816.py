@@ -116,11 +116,11 @@ class CST816:
             return data[0]
 
     def who_am_i(self):
-        """Checks for Chip ID"""
+        """Check the Chip ID"""
         return bool(self._i2c_read(_CST816_ChipID) == 0xB5)
 
     def reset(self):
-        """Reset Chip"""
+        """Make the Chip Reset"""
         self._i2c_write(_CST816_DisAutoSleep, 0x00)
         time.sleep(0.1)
         self._i2c_write(_CST816_DisAutoSleep, 0x01)
@@ -139,7 +139,7 @@ class CST816:
         self._i2c_write(_CST816_DisAutoSleep, 0x01)
 
     def stop_sleep(self):
-        """Make the Chip go to Sleep"""
+        """Make the Chip Stop Sleeping"""
         self._i2c_write(_CST816_DisAutoSleep, 0x01)
 
     def set_mode(self, mode):

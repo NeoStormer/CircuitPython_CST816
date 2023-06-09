@@ -37,17 +37,17 @@ Usage Example
     import board
     import busio
     import cst816
-    
+
     # Initialize I2C
     i2c = busio.I2C(board.GP7,board.GP6)
     touch = cst816.CST816(i2c)
-    
+
     # Check if the touch controller is detected
     if touch.who_am_i():
         print("CST816 detected.")
     else:
         print("CST816 not detected.")
-    
+
     # Read touch data continuously
     while True:
         point = touch.get_point()

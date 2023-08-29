@@ -47,13 +47,13 @@ _CST816_YposL = const(0x06)
 _CST816_ChipID = const(0xA7)
 _CST816_ProjID = const(0xA8)
 _CST816_FwVersion = const(0xA9)
-_CST816_MotionMask = const(0xAA)
 
 _CST816_BPC0H = const(0xB0)
 _CST816_BPC0L = const(0xB1)
 _CST816_BPC1H = const(0xB2)
 _CST816_BPC1L = const(0xB3)
 
+_CST816_MotionMask = const(0xEC) # 0xAA change to 0xEC
 _CST816_IrqPluseWidth = const(0xED)
 _CST816_NorScanPer = const(0xEE)
 _CST816_MotionSlAngle = const(0xEF)
